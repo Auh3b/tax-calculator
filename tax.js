@@ -32,7 +32,7 @@ class Tax {
             let netValue = this.input.value;
             this.salary.innerHTML = `${$.number(
               netValue
-            )} <p>There's no deduction from this amount</p>`;
+            )} <p id="caution"><i class="fas fa-exclamation-circle"></i> There's no deductions from this amount</p>`;
           } else if (this.input.value > data[i][category][35]) {
             let netValue =
               this.input.value -
