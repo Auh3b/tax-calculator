@@ -49,9 +49,12 @@ button {
     background: #f4f4f4;
   }
   main {
-    margin-top: 20rem;
+    margin-top: 10rem;
     width: 100%;
     height: 100%;
     padding: 0 0.2rem;
+  }
+  #caution {
+    right: 20px;
   }
 }
