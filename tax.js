@@ -30,18 +30,20 @@ class Tax {
         if (Object.keys(data[i]) == category) {
           if (data[i][category][0] > this.input.value) {
             let netValue = this.input.value;
-            this.salary.textContent = netValue;
+            this.salary.innerHTML = `${$.number(
+              netValue
+            )} <p>There's no deduction from this amount</p>`;
           } else if (this.input.value > data[i][category][35]) {
             let netValue =
               this.input.value -
               ((this.input.value - data[i][category][0]) * 0.3 +
                 (this.input.value - data[i][category][0]) * 0.35);
-            this.salary.textContent = netValue;
+            this.salary.textContent = $.number(netValue);
           } else {
             let netValue =
               this.input.value -
               (this.input.value - data[i][category][0]) * 0.3;
-            this.salary.textContent = netValue;
+            this.salary.textContent = $.number(netValue);
           }
         }
       }
