@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <h2>MALAWI INCOME TAX CALCULATOR</h2>
+      <ul>
+        <li>
+          <label class="category"
+            ><input
+              class="checkbox"
+              type="radio"
+              name="optradio"
+            />Weekly</label
+          >
+        </li>
+        <li>
+          <label class="category"
+            ><input
+              class="checkbox"
+              name="optradio"
+              type="radio"
+            />Fortnightly</label
+          >
+        </li>
+        <li>
+          <label class="category"
+            ><input
+              class="checkbox"
+              name="optradio"
+              type="radio"
+            />Monthly</label
+          >
+        </li>
+        <li>
+          <label class="category"
+            ><input
+              class="checkbox"
+              name="optradio"
+              type="radio"
+            />Annually</label
+          >
+        </li>
+      </ul>
+      <div id="form" class="container">
+        <div>
+          <input id="input" type="number" />
+          <button id="calculate" class="button-primary">Calculate</button>
+        </div>
+        <div>
+          <p>
+            Net <span id="sal-cat"></span> Salary: MWK<span id="salary"></span>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="app.js"></script>
+  </body>
+</html>

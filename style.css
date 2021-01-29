@@ -1,0 +1,38 @@
+body {
+  font-family: "montserrat", sans-serif;
+  background: #176174;
+  /* margin: auto; */
+}
+main {
+  background: #f4f4f4;
+  margin: auto;
+  width: 75vh;
+  height: 50vh;
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+li {
+  list-style: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+button {
+  background: lightseagreen;
+  border: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+}
+.selected {
+  background: darkcyan;
+  color: #f4f4f4;
+}
