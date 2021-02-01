@@ -1,61 +1,104 @@
+html,
 body {
-  font-family: "montserrat", sans-serif;
-  background: #176174;
-  /* margin: auto; */
+  font-family: "Open Sans", sans-serif !important;
 }
 main {
-  background: #f4f4f4;
-  margin: auto;
-  width: 75vh;
-  height: 50vh;
-  margin-top: 15rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
+  margin-top: 10rem !important;
 }
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+
+.category {
+  margin-left: 1.2rem;
 }
-li {
-  list-style: none;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+
+.input-container {
+  display: block;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-button {
-  background: lightseagreen;
-  border: none;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 0.5rem;
-}
-#caution {
-  background: #acab6e;
-  color: #f4f4f4;
-  padding: 0;
-  margin: 0;
-  width: 300px;
+
+.input-container input {
   position: absolute;
-  top: 90px;
-  right: 80px;
-  border-radius: 50px;
+  opacity: 0;
+  cursor: pointer !important;
+  height: 0;
+  width: 0;
+  /* margin-right: 10rem; */
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  transform: scale(0.75);
+}
+
+.input-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.input-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.input-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.input-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.thead {
+  background: #0e6573;
+}
+.table thead th {
+  border-bottom: solid 1px #148ea1 !important;
+}
+.table th {
+  border-top: none !important;
+}
+
+.table td {
+  border-top: solid 1px #148ea1 !important;
 }
 
 @media (max-width: 480px) {
-  body {
-    background: #f4f4f4;
-  }
   main {
-    margin-top: 5rem;
-    width: 100%;
-    height: 100%;
-    padding: 0 0.2rem;
+    margin-top: 0 !important;
   }
-  #caution {
-    right: 20px;
-    top: 130px;
+  #box {
+    background: #343a40 !important;
+  }
+  .thead {
+    background: #f8f9fa;
+    color: #333;
+  }
+  .table thead th {
+    border-bottom: solid 1px #f8f9fa !important;
+  }
+
+  .table td {
+    border-top: solid 1px #f8f9fa !important;
   }
 }
