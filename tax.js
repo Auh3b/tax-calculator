@@ -57,23 +57,23 @@ class Tax {
             </tbody>
           </table>
           `;
-          if (data[i][category][0] > this.input.value) {
-            let netValue = this.input.value;
+          if (data[i][category][0] > +this.input.value) {
+            let netValue = +this.input.value;
             this.salary.innerHTML = `${$.number(
               netValue
             )} <p id="caution" class="bg-warning rounded px-1"><i class=" fas fa-exclamation-circle"></i> There's no deductions from this amount</p>`;
             this.rateTable.innerHTML = "";
-          } else if (this.input.value > data[i][category][35]) {
+          } else if (+this.input.value > data[i][category][35]) {
             let netValue =
-              this.input.value -
-              ((this.input.value - data[i][category][0]) * 0.3 +
-                (this.input.value - data[i][category][0]) * 0.35);
+              +this.input.value -
+              ((+this.input.value - data[i][category][0]) * 0.3 +
+                (+this.input.value - data[i][category][0]) * 0.35);
             this.salary.textContent = $.number(netValue);
             this.rateTable.innerHTML = table;
           } else {
             let netValue =
-              this.input.value -
-              (this.input.value - data[i][category][0]) * 0.3;
+              +this.input.value -
+              (+this.input.value - data[i][category][0]) * 0.3;
             this.salary.textContent = $.number(netValue);
             this.rateTable.innerHTML = table;
           }

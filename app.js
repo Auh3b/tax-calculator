@@ -13,8 +13,9 @@ tax
       .then((category) => {
         tax.getTax(data, category);
       })
+
       .catch((err) => console.log(err));
   })
   .catch((err) => console.log(err));
 
-$("#input").number(true, 2);
+// $("#input").number(true, 2);

@@ -4,25 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tax Calculator</title>
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    
     <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/7fd4353ed5.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body class="bg-dark">
-    <main class="container text-light">
-      <div class="row align-items-center">
-        <div id="box"class="col-md-5 mx-auto text-center py-5 bg-info rounded ">
-          <h2 class="py-3">MALAWI INCOME TAX CALCULATOR</h2>
+    <main class="container">
+      <div class="row">
+        <div
+          id="box"
+          class="col-md-6 mx-auto mt-5 py-5 text-center"
+        >
+          <div class="card">
+            <div class="card-header">
+              <h2 class="">Malawi Income Tax Calculator</h2>
+            </div>
+            <div class="card-block p-3">
+              <form>
+                <div class="form-group">
+                  <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <label class="category form-check-label">
+                            <input type="radio" class="form-check-input" name="optradio">Weekly
+                            <span class="checkmark"></span>
+                          </label>
+                    </div>
+                    <div class="form-check form-check-inline"><label class="category form-check-label">
+                      <input type="radio" class="form-check-input" name="optradio">Fortnightly
+                      <span class="checkmark"></span>
+                    </label></div>
+                    <div class="form-check form-check-inline"><label class="category form-check-label">
+                      <input type="radio" class="form-check-input" name="optradio">Monthly
+                      <span class="checkmark"></span>
+                    </label></div>
+                    <div class="form-check form-check-inline"><label class="category form-check-label">
+                      <input type="radio" class="form-check-input" name="optradio">Annually
+                      <span class="checkmark"></span>
+                    </label></div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </div>
+                    <input id="input" type="text" class="form-control" />
+                    <div class="input-group-append">
+                      <button id="calculate" class="btn btn-outline-secondary" type="button">
+                        Calculate
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <div class="p-1">
+                <p>
+                  Net <span id="sal-cat"></span> Salary: MWK<span id="salary"></span>
+                </p>
+              </div>
+              <div id="tax-rate" class="">
+    
+              </div>
+            </div>
+          </div>
+          <!-- <h2 class="py-3">MALAWI INCOME TAX CALCULATOR</h2>
           <div class="container mx-auto row my-3">
             <div class="input-container form-check-inline">
               <label class="category form-check-label">
@@ -68,7 +127,7 @@
           </div>
           <div id="tax-rate" class="container mx-auto">
 
-          </div>
+          </div> -->
         </div>
       </div>
     </main>
